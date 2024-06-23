@@ -1,0 +1,54 @@
+<mxfile host="app.diagrams.net" modified="2024-04-18T14:52:04.868Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36" etag="tOx38NUyKmNpPQk3r261" version="24.2.5" type="device">
+  <diagram name="Страница — 1" id="sLeVzgZNu1Ltn9hVn6qM">
+    <mxGraphModel dx="1283" dy="777" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="zP4dPDFVvtw_juU7Mabr-7" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="zP4dPDFVvtw_juU7Mabr-1" target="zP4dPDFVvtw_juU7Mabr-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="zP4dPDFVvtw_juU7Mabr-1" value="Администратор" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" vertex="1" parent="1">
+          <mxGeometry x="200" y="405" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="zP4dPDFVvtw_juU7Mabr-2" value="Просмотр задачи" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="540" y="270" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="zP4dPDFVvtw_juU7Mabr-3" value="Удаление задачи" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="414" y="550" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="zP4dPDFVvtw_juU7Mabr-8" value="include" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;dashed=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="zP4dPDFVvtw_juU7Mabr-4" target="zP4dPDFVvtw_juU7Mabr-5">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="450" y="400" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zP4dPDFVvtw_juU7Mabr-4" value="Работа с блоком задачи" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="380" y="400" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="zP4dPDFVvtw_juU7Mabr-5" value="Создание задачи" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="370" y="250" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="zP4dPDFVvtw_juU7Mabr-6" value="Редактирование задач" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="640" y="430" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="zP4dPDFVvtw_juU7Mabr-22" value="include" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;dashed=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="zP4dPDFVvtw_juU7Mabr-4" target="zP4dPDFVvtw_juU7Mabr-2">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="540" y="420" as="sourcePoint" />
+            <mxPoint x="530" y="340" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zP4dPDFVvtw_juU7Mabr-24" value="include" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;dashed=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="zP4dPDFVvtw_juU7Mabr-4" target="zP4dPDFVvtw_juU7Mabr-6">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="480" y="430" as="sourcePoint" />
+            <mxPoint x="470" y="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zP4dPDFVvtw_juU7Mabr-25" value="include" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;dashed=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="zP4dPDFVvtw_juU7Mabr-4" target="zP4dPDFVvtw_juU7Mabr-3">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="490" y="440" as="sourcePoint" />
+            <mxPoint x="480" y="360" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

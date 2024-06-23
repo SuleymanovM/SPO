@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Связи</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+             background-color: #e6f1e6;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        form {
+            background-color: #f9f9f9; /* Changed form background color */
+            border: 2px solid #4CAF50; /* Thicker border with a green color */
+            border-radius: 10px; /* Rounded corners */
+            padding: 15px; /* Reduced padding */
+            margin: 20px; /* Increased margin */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Enhanced box shadow */
+            width: 80%;
+            max-width: 800px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 12px; /* Increased padding */
+            text-align: left;
+            border: 1px solid #ddd; /* Lighter border color */
+        }
+        th {
+            background-color: #4CAF50;
+            color: #ffffff;
+            font-weight: bold; /* Bold font weight */
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 10px; /* Increased padding */
+            box-sizing: border-box;
+            border: 1px solid #9dc79d; /* Light border color */
+            border-radius: 5px; /* Rounded corners */
+            margin-bottom: 10px; /* Added margin */
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: #ffffff;
+            border: none;
+            padding: 12px 20px; /* Increased padding */
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 15px; /* Adjusted margin */
+            font-weight: bold; /* Bold font weight */
+        }
+        input[type="submit"]:hover {
+            background-color: #2b8a3e;
+        }
+        a {
+            text-decoration: none;
+            color: #4CAF50;
+            font-weight: bold;
+            margin-top: 20px;
+            border-bottom: 2px solid #4CAF50; /* Added bottom border */
+            padding-bottom: 3px; /* Added padding for bottom border */
+    }
+        a:hover {
+            color: #2b8a3e;
+            border-bottom-color: #2b8a3e; /* Change bottom border color on hover */
+    }
+</style>
+</head>
+<body>
+    <form method="POST">
+        <table>
+            <tr>
+                <th>Наименование</th>
+                <th>Описание</th>
+            </tr>
+            {% for index, row in processed_data.iterrows() %}
+            {% if not row.source and not row.target %}
+            <tr>
+                <td><a href="{{ url_for('show_connections', element=row.value) }}">{{ row.value }}</a></td>
+                <td>
+                    <input type="text" name="description_{{ index }}" value="{{ row.description if row.description else '' }}">
+                </td>
+            </tr>
+            {% endif %}
+            {% endfor %}
+        </table>
+        <input type="submit" value="Сохранить">
+    </form>
+    <br>
+    <a href="/">На главную</a>
+</body>
+</html>

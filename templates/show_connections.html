@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Связи элемента</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #edf7ed; /* Changed background color to light green */
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        table {
+            width: 80%;
+            max-width: 800px;
+            margin: 10px 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border: 1px solid #8dc380;
+            display: block; /* Display as a block element to stack content */
+            margin-bottom: 10px; /* Add margin between each element */
+        }
+        th {
+            background-color: #4CAF50;
+            color: #ffffff;
+        }
+        td a {
+            text-decoration: none;
+            color: #4CAF50;
+        }
+        td a:hover {
+            color: #2b8a3e;
+        }
+        a {
+            text-decoration: none;
+            color: #4CAF50;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+        a:hover {
+            color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    {% for connection in connections %}
+    <table>
+        <tr>
+            <th>Источник</th>
+            <td><a href="{{ url_for('show_connections', element=connection[0]) }}">{{ connection[0] }}</a></td>
+        </tr>
+        <tr>
+            <th>Описание источника</th>
+            <td>{{ connection[3] }}</td>
+        </tr>
+        <tr>
+            <th>Вид связи</th>
+            <td>{{ connection[2] }}</td>
+        </tr>
+        <tr>
+            <th>Цель</th>
+            <td><a href="{{ url_for('show_connections', element=connection[1]) }}">{{ connection[1] }}</a></td>
+        </tr>
+        <tr>
+            <th>Описание цели</th>
+            <td>{{ connection[4] }}</td>
+        </tr>
+    </table>
+    <br>
+    {% endfor %}
+    <a href="/show_descriptions">К описаниям</a>
+</body>
+</html>

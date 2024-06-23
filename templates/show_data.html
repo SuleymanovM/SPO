@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Данные</title>
+</head>
+<body>
+
+    <table border="1">
+        <tr>
+            <th>Айди</th>
+            <th>Источник</th>
+            <th>Цель</th>
+            <th>Наименование</th>
+        </tr>
+        {% for index, row in processed_data.iterrows() %}
+        <tr>
+            <td>{{ row.id }}</td>
+            <td>{{ row.source }}</td>
+            <td>{{ row.target }}</td>
+            <td>{{ row.value }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <br>
+    <a href="/">На главную</a>
+</body>
+</html>
